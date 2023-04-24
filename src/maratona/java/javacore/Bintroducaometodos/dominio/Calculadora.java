@@ -26,6 +26,7 @@ public class Calculadora {
         }
         return 0;
     }
+
     public void imprimidivideDoisnumeros(double num1, double num2) {
         if (num2 == 0) {
             System.out.println("Não existe divisao por 0");
@@ -34,7 +35,7 @@ public class Calculadora {
         System.out.println(num1 / num2);
     }
 
-    public void alteraDoisValores(int num1, int num2){
+    public void alteraDoisValores(int num1, int num2) {
         num1 = 99;
         num2 = 33;
         System.out.println("Dentro do alteraDoisValores ");
@@ -42,9 +43,17 @@ public class Calculadora {
         System.out.println("Num2 " + num2);
     }
 
-    public void somaArray(int[] numeros){
+    public void somaArray(int[] numeros) {
         int soma = 0;
-        for(int num: numeros){
+        for (int num : numeros) {
+            soma += num;
+        }
+        System.out.println(soma);
+    }
+
+    public void somaVarArgs(int... numeros) {
+        int soma = 0;
+        for (int num : numeros) {
             soma += num;
         }
         System.out.println(soma);
